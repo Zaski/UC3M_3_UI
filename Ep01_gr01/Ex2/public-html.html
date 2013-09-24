@@ -19,13 +19,14 @@ Group 1
 	</head>
 	
 	<body>
-		<!-- Background div -->
+	
+		<!-- content container -->
 		<div class="main">
-		
 			<!-- Header -->
 			<header>
-			
+				
 				<div id="headerLogo">
+					<!-- Disclaimer-source: http://upload.wikimedia.org/wikipedia/en/b/b1/Olympic_Rings.svg -->
 					<img class="logoImage" src="images/logo.png">
 				</div>
 				
@@ -40,15 +41,109 @@ Group 1
 					<p id="headerComponents"> Brought to you by these nice people: </p>
 					<ul class="membersList">
 						<li> Óscar Seguro Alonso </li>
-						<li> Ramses Joel Salas Machado </li>
-						<li> Silvina Nomesé Tusapellidos </li>
+						<li> Ramses J. Salas Machado </li>
+						<li> Silvina Nomeacuerdo </li>
 					</ul>
 				</div>
 				
+			</header>	
+			
+			<!-- Lateral vertical content navigation bar -->
+			<div class="navigationRight">
+			<p> This is a test navigation element</p>
+			</div>
+			
+			<!-- Main content area -->
+			<div class="content">
 				
-			</header>
+				<div class="contentTitle">
+					<h1 class="title"> <b>This is a Generic Form</b> </h1>
+					<br>
+					<p> Please, fulfill the following form with the required data.<br>
+					Notice that the fields marked with an asterisk are mandatory</p>
+					<br>
+				</div>
+				
+				<div class="form">
+					<div class="formText">
+						<p>
+							Type of problem<span id="asterisk">*</span>:
+							<br>
+							<br>
+							<br>
+							<br>
+							Username<span id="asterisk">*</span>:
+							<br>
+							<br>
+							Email<span id="asterisk">*</span>:
+							<br>
+							<br>
+							Location<span id="asterisk">*</span>:
+							<br>
+							<br>
+							Phone:
+							<br>
+							<br>
+							Description of the problem<span id="asterisk">*</span>:
+							<br>
+							<br>
+							<br>
+							<br>
+							Do you want to be notified<br>
+							when the problem is solved?
+							<br>
+						</p>
+					</div>
+					
+					<div class="formInput">
+						<form id="genericForm">
+							<input type="radio" name="typeOfProblem" value="Technical"> Technical<br>
+							<input type="radio" name="typeOfProblem" value="ProductNotAvailable"> Product not available<br>
+							<input type="radio" name="typeOfProblem" value="MissingInfoProduct"> Missing information about the product<br>
+							<br>
+							<input type="text" name="username">
+							<br>
+							<br>
+							<input type="email" name="email">
+							<br>
+							<br>
+							<input type="text" name="location">
+							<br>
+							<br>
+							<input type="tel" name="phoneNumber">
+							<br>
+							<br>
+						</form>
+						<textarea rows="4" cols="50" name="description" form="genericForm">Enter your comments here.
+						</textarea>
+						<form id="genericForm">
+							<br>
+							<input type="radio" name="notification" value="yes">Yes
+							<input type="radio" name="notification" value="no">No
+						</form>
+						
+					</div>
+				</div>
+								
+			</div>
+			
+			<!-- Footer -->
+			<footer>
 		
-		</div>
+				<div id="licenseImg">
+					<!-- License information -->
+					<img class="licenseImage" src="http://es.creativecommons.org/blog/wp-content/uploads/2013/04/by-nc-sa.eu_petit.png">
+				</div>
+				
+				<div id="licenseText">
+					<p id="licenseTextContent"> Licensed under Creative Commons by-nc-sa license. </p>
+				</div>
+				
+			</footer>
+		
+
+			
+		</div> 
 		
 	</body>
 	
