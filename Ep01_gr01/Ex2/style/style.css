@@ -191,6 +191,7 @@ background-color: #ABABAB;
 	/*float: left;*/
 	display: inline-block;
 	margin: 1%;
+	vertical-align: top;
 	}
 
 	div.formInput

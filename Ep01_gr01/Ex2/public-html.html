@@ -101,25 +101,28 @@ Group 1
 							<input type="radio" name="typeOfProblem" value="ProductNotAvailable"> Product not available<br>
 							<input type="radio" name="typeOfProblem" value="MissingInfoProduct"> Missing information about the product<br>
 							<br>
-							<input type="text" name="username">
+							<input type="text" name="username" placeholder="Mr. Potato">
 							<br>
 							<br>
-							<input type="email" name="email">
+							<input type="email" name="email" placeholder="potato@potatoide.com">
 							<br>
 							<br>
-							<input type="text" name="location">
+							<input type="text" name="location" placeholder="Plantation Street, NY, US">
 							<br>
 							<br>
-							<input type="tel" name="phoneNumber">
+							<input type="tel" name="phoneNumber" placeholder="+486666666">
 							<br>
 							<br>
 						</form>
-						<textarea rows="4" cols="50" name="description" form="genericForm">Enter your comments here.
+						<textarea rows="4" cols="50" placeholder="Enter your comments" name="description" form="genericForm" >
 						</textarea>
 						<form id="genericForm">
 							<br>
-							<input type="radio" name="notification" value="yes">Yes
-							<input type="radio" name="notification" value="no">No
+							<input type="checkbox" name="notification" value="yes"> Yes, please
+							<br>
+							<br>
+							<input type="submit" name="submitButton" value="Generic submit button">
+							<br>
 						</form>
 						
 					</div>
