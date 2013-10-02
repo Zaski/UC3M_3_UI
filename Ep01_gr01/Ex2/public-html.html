@@ -40,7 +40,7 @@ Group 1
 					<ul class="membersList">
 						<li> Óscar Seguro Alonso </li>
 						<li> Ramses J. Salas Machado </li>
-						<li> Silvina Nomeacuerdo </li>
+						<li> Silvina Caino </li>
 					</ul>
 				</div>
 				
@@ -48,12 +48,31 @@ Group 1
 			
 			<!-- Lateral vertical content navigation bar -->
 			<div class="navigationRight">
-			<p> This is a test navigation element</p>
+			
+				<div class="navigationRightImage">
+					<img class="navigationImage" src="images/david.jpg">
+				</div>
+				
+				<br>
+				
+				<ul class="navigationMenu">
+						<li> <h3> <a class="menuLink" href="">Home</a> </h3> </li>
+						<li> <h3> <a class="menuLink" href="">Cart</a> </h3> </li>
+						<li> <h3> <a class="menuLink" href="">Meta</a> </h3> </li>
+						<li>
+							<ul class="navigationMenu">
+								<li> <a class="menuLink" href="">Profile</a> </li>
+								<li> <a class="menuLink" href="">Logout</a> </li>
+							</ul>
+						</li>
+				</ul>
+				
 			</div>
 			
 			<!-- Main content area -->
 			<div class="content">
 				
+				<!-- Title and introductory text -->
 				<div class="contentTitle">
 					<h1 class="title"> <b>This is a Generic Form</b> </h1>
 					<br>
@@ -62,7 +81,9 @@ Group 1
 					<br>
 				</div>
 				
+				<!-- Form, divided in a div for the names of the fields and a div for the fields themselves -->
 				<div class="form">
+					<!-- Names -->
 					<div class="formText">
 						<p>
 							Type of problem<span id="asterisk">*</span>:
@@ -93,6 +114,7 @@ Group 1
 						</p>
 					</div>
 					
+					<!-- Fields -->
 					<div class="formInput">
 						<form id="genericForm">
 							<input type="radio" name="typeOfProblem" value="Technical"> Technical<br>
