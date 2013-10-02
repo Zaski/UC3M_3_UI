@@ -130,8 +130,8 @@ div.mainArea{
 section.article {
  background-color:#EEEEEE; 
  border-radius:20px; 
- width:900px;
- height:850px; 
+ width:650px;
+ height:1000px; 
  display:inline-block; 
  -webkit-box-shadow: 3px 3px 10px 3px #ddd;
  -moz-box-shadow: 3px 3px 10px 3px #ddd; 
