@@ -8,17 +8,46 @@ body {
   margin:0;
 }
 
+
+/* Hidden form to select display options */
 div.formContainer {
- background-color:#FAE9D7;
- display:block;
- padding:0;
- margin:0;
+	background-color:#FAE9D7;
+	display:block;
+	padding:0;
+	margin:auto;
 }
 
-p.browserInfo {
- text-align:center;
- background-color:#8DA971;
-}
+	p.browserInfo {
+		text-align:center;
+		background-color:#8DA971;
+	}
+	
+	form.hiddenForm {
+		display:block;
+	}
+	
+		fieldset {
+			display:inline-block;
+			border: 1px dotted green;
+		}
+		
+		legend {
+			text-align:center;
+		}
+		
+		#white {
+			background:#FFFFFF;
+		}
+		#gray {
+			background:#CCCCCC;
+		}
+		#green {
+			background:#D4E2B8;
+		}
+		#brown {
+			background:#E8CCA5;
+		}
+		
 
 div.rootContainer {
  background-color:#FAE9D7;

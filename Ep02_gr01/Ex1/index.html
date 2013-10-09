@@ -20,28 +20,38 @@
 	<!-- cambiar display dependiendo de la capa en la que se este (controlar con botones en el css) -->
 	<div class="formContainer">
 		<p class="browserInfo"> 
-			<script>
-				document.write("You are using " + navigator.appCodeName + " " + navigator.appName + " version " + navigator.appVersion 
-					+ " on " + navigator.platform);
-				document.write("<br><br>");
-				
-				var status;
-				if (navigator.cookieEnabled == true) {
-					status = "ON";
-				} else {
-					status = "OFF";
-				}
-				document.write("Your cookies are " + status + "<br>");				
-			</script>
+			<script src="browser.js"></script>
 		</p>
 		
-		<form>
-			<!--
-			color: desplegable preseleccionado color por defeto para navegador
-			letra: radio button
-			tamaño: radio button
-			enviar: boton submit
-			-->
+		<form class="hiddenForm">
+			<fieldset id="">
+				<legend>Article background colour</legend>
+				<select>
+					<option id="white" value="white">White</option>
+					<option id="gray" value="gray">Gray</option>
+					<option id="green" value="green">Green</option>
+					<option id="brown" value="brown">Brown</option>
+				</select>
+			</fieldset>
+			<br>
+		
+			<fieldset>
+				<legend>Font style</legend>				
+				<input type="radio" name="fontStyle" value="default" checked>Default<br>
+				<input type="radio" name="fontStyle" value="bold">Bold<br>
+				<input type="radio" name="fontStyle" value="italic">Italic<br>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Font size</legend>	
+				<input type="radio" name="fontSize" value="default" checked>Default<br>		
+				<input type="radio" name="fontSize" value="large">Large (+20%)<br>
+				<input type="radio" name="fontSize" value="small">Small (-20%)<br>
+			</fieldset>
+			
+			<br>
+			<br>
+			<input type="submit" value="Submit choices">
 		</form>
 	</div>
 	
