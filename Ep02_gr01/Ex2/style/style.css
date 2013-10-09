@@ -1,0 +1,232 @@
+﻿/*
+UC3m
+User Interfaces
+
+Group 1
+Exercise 2
+*/
+
+/*Eliminate default margins and paddings to have a full-width header and footer*/
+*
+{
+margin: 0;
+padding: 0;
+}
+
+
+/*BACKGROUND*/
+body
+{
+background: #333333;
+}
+
+/*HEADER AND FOOTER STYLES*/
+header, footer
+{
+	background-color: #333333;
+	color: #FFFFFF;
+	}
+
+header
+{
+	/*float: left;*/
+	width: 100%;
+	height: 150px;
+	margin: 0;
+	}
+	
+	/*Header images*/
+	img.logoImage
+	{
+	height: 100px;
+	}
+	
+	/*Begin header texts styling*/
+	#logo
+	{
+	color: #FFFFFF;
+	font-family: /*Century Gothic,*/ logoFont;
+	margin-left: 5%;
+	margin-top: 1%;
+	}
+	
+	#logoBar
+	{
+	float:left;
+	width:40%;
+	margin-top:0px;
+	margin-left: 10%;
+	}
+
+	#logoSlogan
+	{
+	margin-top: 0px;
+	margin-left: 10%;
+	}
+
+	#headerComponents
+	{
+	padding: 5px 10px;
+	margin: 0;
+	}
+
+	ul.membersList
+	{
+	list-style-type: circle;
+	padding: 0;
+	margin-left: 14%;
+	}
+	/*End header texts styling*/
+	
+	/*Begin header div elements styling*/
+	#headerLogo
+	{
+	float: left;
+	margin: 1%;
+	position: relative;
+	top: 10%;
+	}
+
+	#headerText
+	{
+	width: 50%;
+	float: left;
+	margin: 1%;
+	vertical-align: middle;
+	}
+
+	#headerMembers
+	{
+	float: right;
+	margin: 1%;
+	width: 20%;
+	height: 80%;
+	vertical-align: middle;
+	border: 2px solid #FFFFFF;
+	border-radius: 10px;
+	}
+	/*End header div elements styling*/
+
+footer
+{
+width: 100%;
+height: 70px;
+margin: 0;
+margin-top: 3%;
+}
+	
+	/*Footer images*/
+	img.licenseImage
+	{
+	height: 40px;
+	}
+	
+	/*Begin footer text styling*/
+	#licenseTextContent
+	{
+	vertical-align: middle;
+	padding-top: 1%;
+	}
+	/*End footer text styling*/
+	
+	/*Begin Footer div elements styling*/
+	#licenseImg
+	{
+	float: left;
+	position:relative;
+	top: 10%;
+	/*float: left;*/
+	margin: 1%;
+	}
+
+	#licenseText
+	{
+	float: left;
+	position: relative;
+	height: 50px;
+	margin: 1%;
+	top: 21%;
+	}
+	/*End Footer div elements styling*/
+
+/*MAIN CONTENT AREA/CONTAINER*/
+div.main
+{
+width: 100%;
+background-color: #ABABAB;
+}
+
+	div.content, div.navigationRight
+	{
+	border: solid 2px;
+	border-radius: 15px;
+	padding: 1%;
+	background-color: #EBEBEB;
+	}
+	
+	div.content
+	{
+	width: 60%;
+	margin-left: 8%;
+	margin-top: 3%;
+	}
+
+	h1.title
+	{
+	text-align: center;
+	}
+
+	div.form
+	{
+	color: black;
+	}
+
+	#asterisk
+	{
+	color: red;
+	}
+
+	div.formText
+	{
+	/*float: left;*/
+	display: inline-block;
+	margin: 1%;
+	vertical-align: top;
+	}
+
+	div.formInput
+	{
+	/*float: left;*/
+	display: inline-block;
+	margin: 1%;
+	}
+
+	div.navigationRight
+	{
+	float: right;
+	margin: 3%;
+	width: 20%
+	}
+
+
+/*FONTS*/
+@font-face
+{
+font-family: textFont;
+src: url(fonts/sansation_light/Sansation_Light.woff);
+}
+
+@font-face
+{
+font-family: textFont;
+src: url(fonts/sansation_bold/Sansation_Bold.woff);
+font-weight: bold;
+}
+
+@font-face
+{
+font-family: "logoFont";
+src: url(fonts/space_age/space_age.woff);
+}
+
+
