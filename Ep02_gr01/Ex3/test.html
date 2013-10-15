@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Draw your figures!</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+	<!--External CSS file-->
+	<link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+	<!--External Java Script file-->
+	<script src="scripts/myscript.js"></script>
+</head>
+
+<body>
+	<!--Root-->
+	<div>
+		<header>
+			<h1>EXERCISE 3</h1>
+		</header  >
+		
+		<!--body-->
+		<div class="bodyContainer">
+			
+			<!--Division to insert canvas-->
+			<div class="canvas">	
+				<canvas id="myCanvas" width="400" height="400"></canvas>
+			</div>
+			
+			<!--Division to insert form-->
+			<div class="form">	
+				<form>
+					<!--Radio buttoms-->
+					<input type="radio" id="rectangle" onClick="displayMenu('rectangle')">Rectangle<br>
+					<input type="radio" id="circle" onClick="displayMenu('circle')">Circle<br>
+					<!--Display a menu in order to recieve the input date by the users-->
+					<div id="features"></div>
+				</form>
+				<!--Display messages to the users-->
+				<div id="message" class="message"></div>
+			</div>
+		</div>
+		
+		<footer>
+			<p class="footer">Oscar Seguro Alonso<br>
+			Silvina Caino Lores<br>
+			Ramses Joel Salas Machado</p>
+		</footer>
+	</div>
+</body>
+
+</html>
