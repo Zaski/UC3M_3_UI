@@ -10,11 +10,19 @@ body {
   margin:0;
 }
 
+/* Class to add in order to hide a block */
+.hiddenClass {
+    display: none;
+}
+
+/* Class to add in order to show a block */
+.shownClass {
+    display: block;
+}
 
 /* Hidden form to select display options */
 div.formContainer {
 	background-color:#FAE9D7;
-	display:block;
 	height:80%;
 	width:70%;
 	margin:auto;
@@ -65,7 +73,6 @@ div.formContainer {
 /* Default page content */
 div.rootContainer {
 	background-color:#FAE9D7;
-	display:none;
 	padding:0;
 	margin:0;
 }
@@ -123,6 +130,10 @@ div.rootContainer {
 					font-size:18px; 
 					margin:0;
 				}	
+				
+			div.button {
+				float: right;
+			}
 
 	nav.upperBar {
 		background-color:#D4E2B8; 
