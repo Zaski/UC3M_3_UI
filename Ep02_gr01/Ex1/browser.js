@@ -1,4 +1,5 @@
-<!--
+
+function showBrowserInfo() {
 	document.write("<br><br>");
 	document.write("You are using " + navigator.appCodeName + " " + navigator.appName + " version " + navigator.appVersion 
 		+ " on " + navigator.platform);
@@ -10,5 +11,5 @@
 	} else {
 		status = "OFF";
 	}
-	document.write("Your cookies are " + status + "<br>");			
--->
+	document.write("Your cookies are " + status + "<br>");	
+}	

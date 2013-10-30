@@ -8,25 +8,29 @@
 
 <head>
 	<title>ECO - logic | Daily enviromental news.</title>
+	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="Geany 1.23.1" />
-	<!--CSS file-->
+	
+	<!-- CSS file -->
 	<link rel="stylesheet" type="text/css" href="style/stylesheet1.css">
+	
+	<!-- External JavaScript files -->
+	<script type="text/javascript" src="customize.js"></script>
+	<script type="text/javascript" src="browser.js"></script>
 </head>
 
 <body>
-
 	<!-- Personalization form container -->
-	<!-- cambiar display dependiendo de la capa en la que se este (controlar con botones en el css) -->
-	<div class="formContainer">
+	<div id="formContainer" class="formContainer hiddenClass">
 		<p class="browserInfo"> 
-			<script src="browser.js"></script>
+			<script>showBrowserInfo();</script>
 		</p>
 		
-		<form class="hiddenForm">
+		<form class="hiddenForm" onsubmit="updateArticle()">
 			<fieldset id="">
 				<legend>Article background colour</legend>
-				<select>
+				<select id="colourSelection">
 					<option id="white" value="white">White</option>
 					<option id="gray" value="gray">Gray</option>
 					<option id="green" value="green">Green</option>
@@ -51,13 +55,12 @@
 			
 			<br>
 			<br>
-			<input type="submit" value="Submit choices">
+			<input type="submit" id="submit" value="Submit changes"/>
 		</form>
 	</div>
 	
 	<!-- Root container -->
-	<div class="rootContainer">
-		
+	<div id="rootContainer" class="rootContainer shownClass">
 		<!-- Header container -->
 		<header>
 			<!-- Image -->
@@ -75,6 +78,11 @@
 					<br>
 					<p class="header">Ecologism makes sense.</p>
 				</div>
+			</div>
+			
+			<!-- Customize button -->
+			<div class="button">
+				<button type="button" id="customize" onclick="switchLayers()">Customize article</button>
 			</div>
 		</header>
 	
@@ -188,7 +196,7 @@
 						<div class="artVideo">
 							<video width="420" height="260" controls>
 							<source src="images/australia.webm" type="video/webm">
-							Your browser does not support the video tag.
+							<b>Your browser does not support the video tag.</b>
 							</video>
 							<p class="comment">
 								Australia's Great Barrier Reef endangered.
