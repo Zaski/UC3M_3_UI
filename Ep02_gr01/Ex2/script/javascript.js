@@ -6,9 +6,9 @@ var type;
 var type1;
 var type2;
 var type3;
-var name;
+var guyname;
 var mail;
-var location;
+var guylocation;
 var phone;
 var description;
 var notification;
@@ -21,51 +21,47 @@ function submitForm() {
 	type = document.getElementById("formType");
 	type1 = document.getElementById("formType1");
 	type2 = document.getElementById("formType2");
-	type3 = document.getElementById("formType2");
-	name = document.getElementById("formName");
+	type3 = document.getElementById("formType3");
+	guyname = document.getElementById("formName");
 	mail = document.getElementById("formMail");
-	location = document.getElementById("formLocation");
+	guylocation = document.getElementById("formLocation");
 	phone = document.getElementById("formPhone");
 	description = document.getElementById("formDescription");
 	notification = document.getElementById("formNotification");
-	
+			
 	var emptyFields = checkMandatoryFields();
 	var wrongFields = checkFormat();
 	
 	
 	if (!emptyFields && !wrongFields){
+		alert("Thank you for fulfilling the form. An email has been sent to the email provided.\nNow, an error will prompt in your web browser, as this webpage has no server-side support to being able to send emails");
 		sendMail();
-		alert("Thank you for fulfilling the form. An email has been sent to the email provided.");
-		return true;
 	}
 	else{
-		alert("Please, fulfill the form correctly. Fields in red are mandatory and must be filled with a correct format. Fields in orange are not mandatory, but must have a correct format too.");
-		return false;
+		alert("Please, fulfill the form correctly. Fields in red are mandatory and must be filled with a correct format. Fields in orange are not mandatory, but must have a correct format too.\nEmpty mandatory fields: " + emptyFieldsArray + "\nWrong fields: " + wrongFieldsArray);
 	}
 }
 
 /* --------------- CHECK EMPTY FIELDS --------------------- */
 
+/* Returns true when some mandatory field is empty */
 function checkMandatoryFields() {
-	var empty;
+	var somethingEmpty;
 	
-	empty = checkType();
-	if(!empty){
-		empty = checkName();
+	var emptyType = checkType();
+	var emptyName = checkName();
+	var emptyMail = checkMail();
+	var emptyLocation = checkLocation();
+	var emptyDescription = checkDescription();
+		
+	if (!emptyType && !emptyName && !emptyMail && !emptyLocation && !emptyDescription){
+		somethingEmpty = false;
 	}
-	if(!empty){
-		empty = checkMail();
+	else{
+		somethingEmpty = true;
 	}
-	if(!empty){
-		empty = checkLocation();
-	}
-	if(!empty){
-		empty = checkDescription();
-	}
-	
-	alert("[DEBUG] checkMandatoryFields returns: " + empty);
-	
-	return empty;
+		
+	return somethingEmpty;
 }
 
 /*Return true if Type is not selected*/
@@ -86,11 +82,9 @@ function checkType(){
 
 /*Return true if Username is empty*/
 function checkName(){
-	alert("[DEBUG] checkName starts");
-	if (name.value == null || name.value == ""){
+	if (guyname.value == null || guyname.value == ""){
 		emptyFieldsArray.push(" Username");
-		//borderRed(name);
-		alert("[DEBUG] checkName returns true");
+		borderRed(guyname);
 		return true;
 	}
 	else{
@@ -102,7 +96,7 @@ function checkName(){
 function checkMail(){
 	if (mail.value == null || mail.value == ""){
 		emptyFieldsArray.push(" Email");
-		//borderRed(mail);
+		borderRed(mail);
 		return true;
 	}
 	else{
@@ -112,9 +106,9 @@ function checkMail(){
 
 /*Return true if Location is empty*/
 function checkLocation(){
-	if (location.value == null || location.value == ""){
+	if (guylocation.value == null || guylocation.value == ""){
 		emptyFieldsArray.push(" Location");
-		//borderRed(location);
+		borderRed(guylocation);
 		return true;
 	}
 	else{
@@ -126,7 +120,7 @@ function checkLocation(){
 function checkDescription(){
 	if (description.value == null || description.value == ""){
 		emptyFieldsArray.push(" Description of the problem");
-		//borderRed(description);
+		borderRed(description);
 		return true;
 	}
 	else{
@@ -136,31 +130,37 @@ function checkDescription(){
 
 /* ----------------- CHECK WRONGLY FORMATTED FIELDS --------------------- */
 
+/* Returns true when the format of any of the fields that require special formatting is wrong */
 function checkFormat() {
-	alert("[DEBUG] checkFormat starts");
+	
 	var wrongFormat;
 	
-	wrongFormat = formatMail();
-	if(!wrongFormat){
-		wrongFormat = formatPhone();
+	var wrongMail = formatMail();
+	var wrongPhone = formatPhone();
+	
+	if (!wrongMail && !wrongPhone){
+		wrongFormat = false;
+	}
+	else{
+		wrongFormat = true;
 	}
 	
-	alert("[DEBUG] checkFormat returns: " + wrongFormat);
 	return wrongFormat;
 }
 
 /*Returns true if format of Mail is wrong. If correct or empty, returns false*/
 function formatMail() {
-
+	
+	var thereIsDot = mail.value.indexOf(".");
 	var atpos = mail.value.indexOf("@");
 	var dotpos = mail.value.lastIndexOf(".");
 	
 	if(checkMail){
 		return false
 	}
-	else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=mail.value.length){
-		wrongFieldsArray.push(" Mail");
-		//borderRed(mail);
+	else if (atpos < 1 || dotpos < atpos+2 || dotpos+2 >= mail.value.length || atpos === -1 || thereIsDot === -1){
+		wrongFieldsArray.push(" Email");
+		borderRed(mail);
 		return true;
 	}
 	else {
@@ -171,18 +171,31 @@ function formatMail() {
 /* Returns true if format of Phone is wrong. If correct or empty, returns false*/
 function formatPhone() {
 	var plusPos = phone.value.lastIndexOf("+");
+	var numbers = phone.value.substring(1, phone.value.length);
 	
 	if(phone.value == null || phone.value == ""){
 		return false
 	}
-	else if (plusPos != 0){
+	else if (plusPos != 0 || !checkNumbers(numbers)){
 		wrongFieldsArray.push(" Phone");
-		//borderOrange(phone);
+		borderOrange(phone);
 		return true
 	}
-	else{
-		return false
+	return false
+}
+
+/* Returns false if string 'number' is not composed only by digits. Otherwise true */
+function checkNumber(number){
+
+	for(i=0;i<number.length;i++){
+	
+	//if the string character is not a number return false
+	 if(number.charCodeAt(i)<48 | number.charCodeAt(i)>57){
+		return false;
+	 }
+	 
 	}
+	return true;
 }
 
 /* ------------------ CHANGE BORDER COLOR WHEN REQUESTED -------------------- */
@@ -196,7 +209,6 @@ function borderOrange(elemment) {
 }
 
 /* --------------------- SEND MAIL TO PROVIDED E-MAIL ----------------- */
-
 function sendMail() {
 
 	var link = mail.value

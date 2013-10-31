@@ -72,7 +72,8 @@ Group 1
 					<h1 class="title"> <b>This is a Generic Form</b> </h1>
 					<br>
 					<p> Please, fulfill the following form with the required data.<br>
-					Notice that the fields marked with an asterisk are mandatory</p>
+					Notice that the fields marked with an asterisk are mandatory.<br>
+					IMPORTANT: this page has no server-side support, and therefore functions such as sending mails are impossible to accomplish.</p>
 					<br>
 				</div>
 				
@@ -82,6 +83,7 @@ Group 1
 					<div class="formText">
 						<p>
 							Type of problem<span id="asterisk">*</span>:
+							<br>
 							<br>
 							<br>
 							<br>
@@ -102,7 +104,6 @@ Group 1
 							<br>
 							<br>
 							<br>
-							<br>
 							Do you want to be notified<br>
 							when the problem is solved?
 							<br>
@@ -111,12 +112,13 @@ Group 1
 					
 					<!-- Fields -->
 					<div class="formInput">
-						<form id="genericForm" onsubmit="submitForm()">
+						<form id="genericForm">
 							<div id="formType">
 							<input id="formType1" type="radio" name="typeOfProblem" value="Technical"> Technical<br>
 							<input id="formType2" type="radio" name="typeOfProblem" value="ProductNotAvailable"> Product not available<br>
-							<input id="formType3" type="radio" name="typeOfProblem" value="MissingInfoProduct"> Missing information about the product<br>
+							<input id="formType3" type="radio" name="typeOfProblem" value="MissingInfoProduct"> Missing information about the product
 							</div>
+							<br>
 							<br>
 							<input id="formName" type="text" name="username" placeholder="Mr. Potato">
 							<br>
@@ -138,7 +140,7 @@ Group 1
 							</div>
 							<br>
 							<br>
-							<input id="formSubmit" type="submit" name="submitButton" value="PROCEED" >
+							<input id="formSubmit" type="button" name="submitButton" value="PROCEED" onClick="submitForm()">
 							<br>
 						</form>
 						

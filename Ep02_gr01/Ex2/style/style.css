@@ -259,7 +259,12 @@ font-family: textFont, Century Gothic;
 color: #333333;
 }
 
-#formType, #formNotification
+#formDescription
+{
+resize: none;
+}
+
+#formType, #formNotification 
 {
 min-height: 25px;
 min-width: 300px;
