@@ -15,48 +15,56 @@
 	<!-- CSS file -->
 	<link rel="stylesheet" type="text/css" href="style/stylesheet1.css">
 	
-	<!-- External JavaScript files -->
-	<script type="text/javascript" src="customize.js"></script>
-	<script type="text/javascript" src="browser.js"></script>
+	<script type="text/javascript" src="scripts/browser.js"></script>	
+	<script type="text/javascript" src="scripts/customize.js"></script>
+</script>
 </head>
 
 <body>
 	<!-- Personalization form container -->
-	<div id="formContainer" class="formContainer hiddenClass">
-		<p class="browserInfo"> 
-			<script>showBrowserInfo();</script>
-		</p>
-		
-		<form class="hiddenForm" onsubmit="updateArticle()">
-			<fieldset id="">
-				<legend>Article background colour</legend>
-				<select id="colourSelection">
-					<option id="white" value="white">White</option>
-					<option id="gray" value="gray">Gray</option>
-					<option id="green" value="green">Green</option>
-					<option id="brown" value="brown">Brown</option>
-				</select>
-			</fieldset>
-			<br>
-		
-			<fieldset>
-				<legend>Font style</legend>				
-				<input type="radio" name="fontStyle" value="default" checked>Default<br>
-				<input type="radio" name="fontStyle" value="bold">Bold<br>
-				<input type="radio" name="fontStyle" value="italic">Italic<br>
-			</fieldset>
+	<div id="formContainer" class="formContainer hiddenClass">	
+		<div id="container">
+			<p class="browserInfo"> 
+				<script>showBrowserInfo();</script>
+			</p>
 			
-			<fieldset>
-				<legend>Font size</legend>	
-				<input type="radio" name="fontSize" value="default" checked>Default<br>		
-				<input type="radio" name="fontSize" value="large">Large (+20%)<br>
-				<input type="radio" name="fontSize" value="small">Small (-20%)<br>
-			</fieldset>
-			
-			<br>
-			<br>
-			<input type="submit" id="submit" value="Submit changes"/>
-		</form>
+			<form i="custoForm" class="hiddenForm" onsubmit="return updateArticle();">
+				<div id="fieldWrap">
+					<fieldset id="">
+						<legend>Article background colour</legend>
+						<select id="colourSelection">
+							<option id="white" value="white">White</option>
+							<option id="gray" value="gray">Gray</option>
+							<option id="green" value="green">Green</option>
+							<option id="brown" value="brown">Brown</option>
+						</select>
+					</fieldset>
+					<br>
+				
+					<fieldset>
+						<legend>Font style</legend>				
+						<input type="radio" name="fontStyle" value="default" checked>Default<br>
+						<input type="radio" name="fontStyle" value="bold">Bold<br>
+						<input type="radio" name="fontStyle" value="italic">Italic<br>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Font size</legend>	
+						<input type="radio" name="fontSize" value="default" checked>Default<br>		
+						<input type="radio" name="fontSize" value="large">Large (+20%)<br>
+						<input type="radio" name="fontSize" value="small">Small (-20%)<br>
+					</fieldset>
+				</div>
+				
+				<br>
+				<br>
+				<div id="submitWrap">
+					<input type="submit" id="submit" value="Submit changes"/>
+				</div>
+				
+				<div id="margin"></div>
+			</form>
+		</div>
 	</div>
 	
 	<!-- Root container -->
@@ -73,16 +81,16 @@
 			<!-- Title -->	
 			<div class="title">
 				<div class="insideTitle"> 
-					<h1>ECO-logic</h1>
+					<h1>Exercise 1</h1>
 					<hr class="header" noshade>
 					<br>
-					<p class="header">Ecologism makes sense.</p>
+					<p class="header"></p>
 				</div>
 			</div>
 			
 			<!-- Customize button -->
 			<div class="button">
-				<button type="button" id="customize" onclick="switchLayers()">Customize article</button>
+				<button type="button" id="customize" onclick="showPopup()">Customize article</button>
 			</div>
 		</header>
 	
@@ -108,17 +116,13 @@
 		<div class="mainArea">
 		
 			<!-- Article section -->
-			<section  class="article">
-					<section class="bg"></section>
+			<section id="article" class="article">
+					<script>setDefaultBackground();</script>
 					<article id="article1">
 						<h3>New Australian Prime Ministers' anti-environmental agenda</h3>
 						<p class="author">by Maxine Newlands</p>
 						<p class="date">
-							<script>
-								var date = new Date();
-								document.write(date.getDay() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "  ||  " 
-									+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
-							</script>
+							<script>getTime();</script>
 						</p>
 						<br>	
 						<hr class="article">
@@ -148,15 +152,15 @@
 						<br><br>
 						</p>
 						
-						<!-- Image and comment -->
-						<div class="artImg">
-							<img class="article" src="images/article.jpg" alt="Reef">
-							<p class="comment">
-								Will Mr Abbott give the big mining companies permission 
-								<br>
-								to destroy the Great Barrier Reef and its inhabitants?
-							</p>
-						</div>
+							<!-- Image and comment -->
+							<div class="artImg">
+								<img class="article" src="images/article.jpg" alt="Reef">
+								<p class="comment">
+									Will Mr Abbott give the big mining companies permission 
+									<br>
+									to destroy the Great Barrier Reef and its inhabitants?
+								</p>
+							</div>
 						
 						<p class="paragraph">
 							New Environment Minister Greg Hunt is tasked with the policy changes and placating the mining industry. Hunt's first big job will 
@@ -237,6 +241,7 @@
 		<footer>
 			<section class="footLeft">
 				<b><p>&copy; ECO - logic | September, 2013</p></b>
+				<p>Silvina Ca&iacute;no, Rams&eacute;s Salas, &Oacute;scar Seguro</p>
 			</section>
 			<section class="footRight">
 				<p class="footer"><b>Friend pages</b></p>
@@ -247,6 +252,8 @@
 		</footer>
 	</div>
 	
+	<!-- External JavaScript files -->
+	<script type="text/javascript" src="customize.js"></script>
 </body>
 	
 </html>
