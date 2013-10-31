@@ -80,18 +80,18 @@
 
 	/* Updates the article's content font styñe. Accepted values are: bold, default and italic. */
 	function updateStyle(style) {
-		var i = "normal";
-		var b = "normal";
+		var italic = "normal";
+		var bold = "normal";
 		if (style == "bold") {
-			b = "bold";
+			bold = "bold";
 		} else if (style == "italic") {
-			i = "italic";
+			italic = "italic";		
 		}
 		
 		var elems = document.getElementsByClassName('paragraph');
 		for (var i=0, length=elems.length; i<length; i++) {
-			elems[i].style.fontStyle = i;	// Set italic
-			elems[i].style.fontWeight = b;	// Set bold
+			elems[i].style.fontStyle = italic;	// Set italic
+			elems[i].style.fontWeight = bold;	// Set bold
 		}
 	}
 -->

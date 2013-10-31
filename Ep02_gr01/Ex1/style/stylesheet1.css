@@ -35,15 +35,15 @@ div.formContainer {
 		width: 290px;
 		padding: 0;
 		border-radius:10px;
-		box-shadow: 0px -2px 10px 3px #AAAAAA;
+		box-shadow: 0px -2px 15px 3px #AAAAAA;
 		opacity: 0.92;
 	}
 
 	p.browserInfo {
 		text-align:center;
-		background-color:#8A997C;
+		background-color:#E8CCA5;
 		margin:0 auto;
-		box-shadow: 0px -2px 10px 3px #AAAAAA inset;
+		box-shadow: 0px -2px 15px 3px #AAAAAA inset;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 	}
