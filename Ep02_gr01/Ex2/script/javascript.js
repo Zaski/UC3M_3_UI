@@ -176,7 +176,8 @@ function formatPhone() {
 	if(phone.value == null || phone.value == ""){
 		return false
 	}
-	else if (plusPos != 0 || !checkNumbers(numbers)){
+	
+	if (plusPos != 0 || !checkNumber(numbers)){
 		wrongFieldsArray.push(" Phone");
 		borderOrange(phone);
 		return true
