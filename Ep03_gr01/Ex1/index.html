@@ -117,36 +117,27 @@
 				<!-- Form to add a new article (not included after every article because it would be confusing) -->
 				<div id="formWrap">
 					<h3>Add a new article</h3>
-				
-					<div id="labels"> 
-						<label>Article title</label><span class="asterisk">*</span>
-						<br>
-						<label>Article author</label><span class="asterisk">*</span>
-						<br><br>
-						
-						<label>Creation date</label><span class="asterisk">*</span>
-						<br>
-						<label>Related image</label> 
-						<br><br>
-						<label>Article content</label><span class="asterisk">*</span>
-						<br>
-					</div>
-					
+					<p><span class="asterisk">(*)</span> <span class="sub">Mandatory fields</span></p>
 					<form id="form">
 						<div id="fieldWrap">
+							<label>Article title</label><span class="asterisk">*</span> <br>
 							<input id="formTitle" type="text" name="title" placeholder="Title" required>
-							<br>
+							<br><br>
+							<label>Article author</label><span class="asterisk">*</span> <br>
 							<input id="formAuthor" type="text" name="author" placeholder="Author" required>
-							<br><br>
+							<br><br><br>
 							
+							<label>Creation date</label><span class="asterisk">*</span> <br>
 							<input id="formTime" type="datetime-local" name="time" required>
-							<br>
-							<input id="formImage" type="text" name="image" placeholder="images/example.jpg">
 							<br><br>
-							<textarea  id="formContent" rows="4" cols="40" name="content" form="form" placeholder="Type the article here" required></textarea>
+							<label>Related image</label> <br>
+							<input id="formImage" type="text" name="image" placeholder="images/example.jpg">
+							<br><br><br>
+							<label>Article content</label><span class="asterisk">*</span> <br>
+							<textarea  id="formContent" rows="7" cols="55" maxlength="1500" name="content" form="form" placeholder="Type the article here" required></textarea>
 						</div>
 						
-						<br><br>
+						<br>
 						<div id="submitWrap">
 							<input type="submit" id="submit" value="Add article"/>
 						</div>

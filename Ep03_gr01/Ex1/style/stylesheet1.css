@@ -240,28 +240,43 @@ div.rootContainer {
 			}
 			
 		#formWrap {
-			margin: 20px auto;
 			text-align: center;
+			width:70%;
+			border-radius:15px; 
+			-webkit-box-shadow: 0px 0px 10px 3px #ADC299 inset;
+			-moz-box-shadow: 0px 0px 10px 3px #ADC299 inset; 
+			box-shadow: 0px 0px 10px 3px #ADC299 inset;
+			background-color:#F1D4B8;
+			padding: 5px;
+			margin:20px auto;
 		}
-		
-			#labels {
-				line-height: 150%;
-				display: inline-block;
-				margin: 1%;
-				vertical-align: top;
-				font-family:serif; 
-				color:#333333;
-				font-size: 14px;
-				text-align: left;
+			span.asterisk {
+				font-style:italic;
+				font-family:serif;
+				color: red;
 			}
-				#asterisk {
-					color: red;
-				}
-			
-			#form {
-				display: inline-block;
+		
+			span.sub {
+				font-style:italic;
+				font-family:serif; 
+				color:#444444;
+				font-size: 16px;
+			}
+		
+			label {
 				margin: 1%;
+				font-family:serif; 
+				color:#444444;
+				font-size: 16px;
+				text-align: left;
+				font-weight:bold
+			}
+							
+			#form {
+				display:inline-block;
+				margin: 10px auto;
 				text-align:left;
+				resize:none;
 			}
 			
 				input:focus, textarea:focus {
@@ -271,21 +286,32 @@ div.rootContainer {
 				}
 				
 				#formTitle, #formAuthor, #formImage, #formContent, #formTime {
-					min-height: 25px;
-					min-width: 300px;
+					min-height: 22px;
+					min-width: 350px;
 					border: 1px solid #999999;
 					border-radius:5px;
-					padding: 0 5px;
+					padding: 0 10px;
 					margin: 1%;
 					font-family:serif; 
-					color:#444444;
+					color:#333333;
 					font-size: 14px;
-					line-height: 150%;
+					background-color:#EEEEEE;
+				}
+				
+				#formTime {
+					min-width: 150px;
+				} 
+				
+				#formContent {
+					min-width: 450px;
+					padding: 10px;
+					resize:none;
 				}
 				
 				#submitWrap {
 					text-align: center;
 					vertical-align: middle;
+					margin-bottom:20px;
 				}
 				
 					#submit {
