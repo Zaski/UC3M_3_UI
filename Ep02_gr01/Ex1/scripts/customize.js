@@ -1,4 +1,4 @@
- <!--
+<!--
 	/* Shows form pop-up */
 	function showPopup() {
 		//document.getElementById("rootContainer").className = "rootContainer hiddenClass";

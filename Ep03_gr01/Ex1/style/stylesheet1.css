@@ -126,7 +126,7 @@ div.rootContainer {
 			display:inline-block;
 		}
 
-	div.mainArea{
+	#mainArea{
 		display:block; 
 		width:92%; 
 		margin:auto; 
@@ -134,7 +134,7 @@ div.rootContainer {
 		margin-bottom:20px;
 	}
 
-		section.articleWrap {
+		#articles {
 			z-index: 1;
 			border-radius:20px; 
 			width:70%; 
@@ -272,7 +272,7 @@ div.rootContainer {
 				font-weight:bold
 			}
 							
-			#form {
+			#articleForm {
 				display:inline-block;
 				margin: 10px auto;
 				text-align:left;
@@ -285,7 +285,7 @@ div.rootContainer {
 					border: 2px solid #999999;
 				}
 				
-				#formTitle, #formAuthor, #formImage, #formContent, #formTime {
+				#formTitle, #formAuthor, #formImage, #formContent, #formDate {
 					min-height: 22px;
 					min-width: 350px;
 					border: 1px solid #999999;
@@ -298,8 +298,8 @@ div.rootContainer {
 					background-color:#EEEEEE;
 				}
 				
-				#formTime {
-					min-width: 150px;
+				#formDate {
+					min-width: 100px;
 				} 
 				
 				#formContent {
