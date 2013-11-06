@@ -17,6 +17,14 @@ $(document).ready(function(){
 		assignCards();
 		console.log("hidding cards, showing reverse...");
 		alert("Game ready!");
+		
+		$(document).on('click', '.cardReverse', function(){
+			var id = $(this).attr('id');
+			var number = id.substring(7, id.length);
+			$('#card' + number).show();
+			$(this).hide();
+			console.log(number);
+		});
 	});
 	
 	
@@ -69,7 +77,7 @@ $(document).ready(function(){
 	
 	function hideCardsShowReverse(){
 		console.log("estoy en hideCardsShowReverse");
-		//test: change attribute 'display' of the first card to 'nonoe'. Expected result: there is 1 card less. Result: there are still 24 cards...
+		//test: change attribute 'display' of the first card to 'none'. Expected result: there is 1 card less. Result: there are still 24 cards...
 		$('#card0').attr('display', 'none');
 		$('img.cardReverse').attr('display', 'block');
 		console.log("job done");

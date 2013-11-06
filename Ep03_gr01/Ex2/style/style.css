@@ -190,13 +190,25 @@ background-color: #ABABAB;
 			float: left;
 			display: none;
 		}
+		/*
+		img.card:hover
+		{
+			width: 85px;
+		}
+		*/
 		
 		img.cardReverse
-		{
+		{	
 			width: 75px;
 			float: left;
-			display: block;
+			display: inline-block;
 		}
+		/*
+		img.cardReverse:hover
+		{
+			width: 85px;
+		}
+		*/
 		
 		#gameDiv
 		{
