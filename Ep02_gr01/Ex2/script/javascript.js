@@ -13,6 +13,12 @@ var phone;
 var description;
 var notification;
 
+console.log("CACA!");
+/*
+(function(win, doc){
+
+})(window, document)*/
+
 function submitForm() {
 	
 	emptyFieldsArray = new Array();
@@ -155,7 +161,7 @@ function formatMail() {
 	var atpos = mail.value.indexOf("@");
 	var dotpos = mail.value.lastIndexOf(".");
 	
-	if(checkMail){
+	if(!checkMail){
 		return false
 	}
 	else if (atpos < 1 || dotpos < atpos+2 || dotpos+2 >= mail.value.length || atpos === -1 || thereIsDot === -1){
