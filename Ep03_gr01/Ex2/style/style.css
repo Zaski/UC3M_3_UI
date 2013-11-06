@@ -30,11 +30,10 @@ header, footer
 
 header
 {
-	/*float: left;*/
 	width: 100%;
 	height: 150px;
 	margin: 0;
-	}
+}
 	
 	/*Header images*/
 	img.logoImage
@@ -71,7 +70,7 @@ header
 	#headerLogo
 	{
 	float: left;
-	margin: 1%;
+	margin: 1% 10%;
 	position: relative;
 	top: 10%;
 	}
@@ -173,7 +172,34 @@ background-color: #ABABAB;
 	width: 60%;
 	margin-left: 8%;
 	margin-top: 3%;
+	display: block;
+	position: relative;
 	}
+	
+	div.content:after
+	{
+	clear: both;
+    content: "";
+    display: block;
+	}
+		
+		/*GAMEDIV*/
+		img.card
+		{
+			width: 75px;
+			float: left;
+		}
+		
+
+		
+		#gameDiv
+		{
+			width: 450px;
+			display: block;
+			position: center;
+			margin-left: 17%;
+		}
+		
 
 	div.navigationRight
 	{
@@ -181,5 +207,6 @@ background-color: #ABABAB;
 	margin: 3%;
 	width: 20%
 	}
+	
 
 
