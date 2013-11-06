@@ -9,10 +9,14 @@ $(document).ready(function(){
 	
 	
 	/* ---------- MAIN ---------- */
-	 $("button").click(function(){
+	 $(document).on('click', '#play', function() {
+		console.log("preparing Game...");
 		prepareGame();
 		var image;
+		console.log("assigning values to cards...");
 		assignCards();
+		console.log("hidding cards, showing reverse...");
+		hideCardsShowReverse();
 		
 		
 		
@@ -65,6 +69,14 @@ $(document).ready(function(){
 			$("#" + cardPositions[i]).attr('src', image);
 			$("#" + cardPositions[(i+numberOfCards)]).attr('src', image);
 		}
+	}
+	
+	function hideCardsShowReverse(){
+		console.log("estoy en hideCardsShowReverse");
+		//test: change attribute 'display' of the first card to 'nonoe'. Expected result: there is 1 card less. Result: there are still 24 cards...
+		$('#card0').attr('display', 'none');
+		$('img.cardReverse').attr('display', 'block');
+		console.log("job done");
 	}
 	
 	/* Begin credits to: http://bost.ocks.org/mike/shuffle/ */
