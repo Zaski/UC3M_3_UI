@@ -188,14 +188,14 @@ background-color: #ABABAB;
 		{
 			width: 75px;
 			float: left;
-			display: inline-block;
+			display: none;
 		}
 		
 		img.cardReverse
 		{
 			width: 75px;
 			float: left;
-			display: none;
+			display: block;
 		}
 		
 		#gameDiv

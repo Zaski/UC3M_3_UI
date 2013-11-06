@@ -16,11 +16,7 @@ $(document).ready(function(){
 		console.log("assigning values to cards...");
 		assignCards();
 		console.log("hidding cards, showing reverse...");
-		hideCardsShowReverse();
-		
-		
-		
-		
+		alert("Game ready!");
 	});
 	
 	
