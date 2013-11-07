@@ -48,7 +48,9 @@ Group 1
 			<div class="navigationRight">
 				<div id="timerDiv">
 					<p>TIME (seconds): </p><p id="timer">0</p>
-				</div>				
+				</div>
+				<hr>
+				<h3 id="instructions"> INSTRUCTIONS </h3>
 			</div>
 			
 			<!-- Main content area -->
@@ -183,6 +185,20 @@ Group 1
 				
 			</div>
 			
+			<div id="popup">
+				<p id="close">CLOSE (X)</p>
+				<h3 id="popupTitle"> INSTRUCTIONS </h3>
+				<ul>
+					<li>Click on the "Play the game" button for the timer to start.</li>
+					<li>Once the timer has started, you will be able to click on the cards. Only two cards will be visible at a time.</li>
+					<li>When two identical cards are visible at the same time (one has been clicked after the other), they will remain unhidden until the end of the game.</li>
+					<li>Trying to reveal three cards in a row will cause the previous two unhidden ones to hide again (unless they are identical).</li>
+					<li>The game ends once all the cards are unhidden. Try to beat the game with the lesser number of clicks possible and as fast as possible.</li>
+					<li>Click on the "PLAY AGAIN!" button to start a new game (will only be visible once a game has started).</li>
+				</ul>
+			</div>
+			
+			<!-- Buttons -->
 			<div id="buttonContainer" class="content">
 				<button id="play">Play the game</button>
 				<button id="replay">PLAY AGAIN!</button>

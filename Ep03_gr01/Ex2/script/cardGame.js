@@ -12,10 +12,25 @@ $(document).ready(function(){
 	
 	
 	/* ---------- MAIN ---------- */
-	$(document).on('click', '#replay', function(){
-		$('#play').click();
+	//show instructions pupup
+	$(document).on('click', '#instructions', function(){
+		console.log("instructions button pressed");
+		$('#popup').fadeIn();
 	});
 	
+	//close popup
+	$(document).on('click', '#close', function(){
+		console.log("close button pressed");
+		$('#popup').fadeOut();
+	});
+	
+	//refresh the page to play a new game
+	$(document).on('click', '#replay', function(){
+		location.reload();
+		//$('#play').click();
+	});
+	
+	//start the game when the play button is pressed
 	$(document).on('click', '#play', function() {
 		timer = self.clearInterval(timer);
 		time = 0;
@@ -105,12 +120,14 @@ $(document).ready(function(){
 
 	}
 	
+	/*fills cardImages array with possible names of the img files*/
 	function fillArrayCardImages(){
 		for(var i=1; i<=numberOfCards; i++){
 			cardImages.push("images/card" + i + ".png");
 		}
 	}
 	
+	/* Each card is displayed in 2 different of the 24 available positions*/
 	function assignCards(){
 		var image;
 		for(var i=0; i<numberOfCards ; i++){
@@ -121,6 +138,7 @@ $(document).ready(function(){
 		}
 	}
 	
+	/* Hide card in position number and show the reverse image*/
 	function hideCardShowReverse(number){
 		$('#card' + number).show();
 		$('#reverse' + number).hide();
@@ -139,6 +157,7 @@ $(document).ready(function(){
 		return unhidden;
 	}
 	
+	/* If 3rd card is pressed and the previous 2 are not equal, hide them both*/
 	function hidePairOfCards(card1, card2){
 		$('#card' + card1).hide();
 		$('#reverse' + card1).show();
