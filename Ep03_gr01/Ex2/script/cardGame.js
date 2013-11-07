@@ -7,13 +7,25 @@ $(document).ready(function(){
 	var cardPositions;
 	var numOfClicks;
 	var numOfPairsUnhidden;
+	var timer;
+	var time;
 	
 	
 	/* ---------- MAIN ---------- */
+	$(document).on('click', '#replay', function(){
+		$('#play').click();
+	});
+	
 	$(document).on('click', '#play', function() {
+		timer = self.clearInterval(timer);
+		time = 0;
+		$('#play').hide();
+		$('#replay').show();
 		prepareGame();
 		assignCards();
-		alert("Game ready!");
+		timer = self.setInterval(function(){clock()},1000);
+
+		
 		var card1;
 		var card2;
 		var idCard1;
@@ -24,7 +36,7 @@ $(document).ready(function(){
 			var id = $(this).attr('id');
 			var number = id.substring(7, id.length);
 			var even = numOfClicks % 2 == 0;
-			console.log(even);
+			console.log("even: " + even);
 			
 			if(!even){
 				hideCardShowReverse(number);
@@ -47,20 +59,12 @@ $(document).ready(function(){
 				idCard2 = number;
 				
 				if(numOfPairsUnhidden == numberOfCards){
-					alert("Congratulations! You won!");
+					alert("Congratulations! You won!\nTime invested: " + time + " seconds.\nClicks done: " + numOfClicks + ".");
+					timer = self.clearInterval(timer);
+
 				}
 			}
 			
-			
-			/*
-			if(numberOfUnhidden() < 2){
-				hideCardShowReverse(number);
-			}
-			else{
-				console.log("there are 2 unhidden cards");
-				
-			}
-			*/
 			
 		});
 	});
@@ -71,6 +75,11 @@ $(document).ready(function(){
 
 	
 	/* ---------- JS FUNCTIONS ---------- */
+	function clock()
+	{
+		var t = ++time;
+		$('#timer').text(t);
+	}
 	
 	function prepareGame(){
 		/*Global variables initialization*/
@@ -83,10 +92,7 @@ $(document).ready(function(){
 		fillArrayCardImages();
 		fillArrayCardPositions();
 		
-		console.log("cardImages: " + cardImages);
-		console.log("cardPositions before shuffle: " + cardPositions);
 		shuffle(cardPositions);
-		console.log("cardPositions after shuffle: " + cardPositions);
 	}
 	
 	/*fills cardPositions array with strings from "card0" to "card<2*numberofCards>*/

@@ -11,6 +11,7 @@ Practice 3
 /*FONTS*/
 @import url(http://fonts.googleapis.com/css?family=Sniglet);
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
 
 /*BACKGROUND*/
 body
@@ -189,33 +190,25 @@ background-color: #ABABAB;
 			width: 75px;
 			float: left;
 			display: none;
+			cursor: pointer;
 		}
-		/*
-		img.card:hover
-		{
-			width: 85px;
-		}
-		*/
+		
 		
 		img.cardReverse
 		{	
 			width: 75px;
 			float: left;
 			display: inline-block;
+			cursor: pointer;
 		}
-		/*
-		img.cardReverse:hover
-		{
-			width: 85px;
-		}
-		*/
+		
 		
 		#gameDiv
 		{
 			width: 450px;
 			display: block;
-			position: center;
-			margin-left: 17%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		
 
@@ -224,6 +217,52 @@ background-color: #ABABAB;
 	float: right;
 	margin: 3%;
 	width: 20%
+	}
+		/*TIMER*/
+		#timerDiv
+		{
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+			background: white;
+			border-radius: 5px;
+			border: solid black 2px;
+			padding-left: 30%;
+		}
+		
+		#timer
+		{
+			color: red;
+			font-family: 'Orbitron', sans-serif;
+		}
+	
+	/*REPLAY BUTTON*/
+	#replayDiv
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	button
+	{
+		margin-left: 40%;
+		border: 2px solid #333333;
+		border-radius: 5px;
+		padding:5px 15px;
+		cursor:pointer;
+		background-color: #666666;
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+	
+	#play
+	{
+		display: block;
+	}
+	
+	#replay
+	{
+		display: none;
 	}
 	
 
