@@ -1,7 +1,9 @@
 /* Link style */
 a:hover {
- background-color:#FCB188;
- text-decoration:underline;
+	background-color:#FCB188;
+	-webkit-box-shadow: 0px 0px 5px 3px #FCB188;
+	box-shadow: 0px 0px 5px 3px #FCB188;
+	-moz-box-shadow: 0px 0px 5px 3px #FCB188;
 }
 
 /* Fill the entire window */
@@ -158,9 +160,9 @@ div.rootContainer {
 			h3 {
 				font-family:times; 
 				color:#7A5109; 
-				font-size:28px; 
+				font-size:23px; 
 				text-align:center; 
-				margin-top:40px; 
+				margin-top:30px; 
 				margin-bottom:10px;
 			}
 
@@ -183,7 +185,8 @@ div.rootContainer {
 
 			hr.article{
 				color:#AAAAAA; 
-				margin:0 auto; 
+				margin:0 auto;
+				margin-top:25px;
 				width:70%;
 			}
 	
@@ -205,8 +208,8 @@ div.rootContainer {
 				text-indent:50px; 
 				width:85%; 
 				margin:0 auto; 
-				margin-top:5px;
-				margin-bottom:25px;
+				margin-top:25px;
+				margin-bottom:5px;
 				font-size: 14px;
 				font-style: normal;
 				font-weight: normal:
@@ -215,7 +218,7 @@ div.rootContainer {
 			div.artImg{
 			 vertical-align:middle;
 			 text-align:center;
-			 margin-top:30px;
+			 margin-top:20px;
 			 overflow:auto;
 			 width:auto;
 			}
@@ -224,10 +227,9 @@ div.rootContainer {
 			 border-radius:5px;
 			 margin-top:10px;
 			 width: 35%;
-			 max-height:300px; 
-			 max-width:500x; 
+			 max-height:150px; 
 			 box-shadow: 0px -2px 10px 3px #B2CC80;
-			 overflow:auto;
+			 overflow:hidden;
 			}
 
 			p.comment {
@@ -236,7 +238,7 @@ div.rootContainer {
 			 font-size:12px; 
 			 text-align:center; 
 			 margin-top:10px; 
-			 margin-bottom:30px;
+			 margin-bottom:10px;
 			}
 			
 		#formWrap {
@@ -285,7 +287,7 @@ div.rootContainer {
 					border: 2px solid #999999;
 				}
 				
-				#formTitle, #formAuthor, #formImage, #formContent, #formDate {
+				#formTitle, #formAuthor, #formImage, #formImgComm, #formContent, #formDate {
 					min-height: 22px;
 					min-width: 350px;
 					border: 1px solid #999999;
@@ -295,7 +297,7 @@ div.rootContainer {
 					font-family:serif; 
 					color:#333333;
 					font-size: 14px;
-					background-color:#EEEEEE;
+					background-color:#F5F5F5;
 				}
 				
 				#formDate {
@@ -303,7 +305,7 @@ div.rootContainer {
 				} 
 				
 				#formContent {
-					min-width: 450px;
+					min-width: 350px;
 					padding: 10px;
 					resize:none;
 				}
@@ -334,7 +336,7 @@ div.rootContainer {
 
 		aside {
 			vertical-align: top;
-			width:25%; 
+			width:24%; 
 			display:inline-block; 
 			position:relative;
 			right:0;

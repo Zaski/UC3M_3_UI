@@ -18,7 +18,7 @@ padding: 0;
 body
 {
 background: #333333;
-font-family: textFont, Century Gothic;
+font-family: 'Share Tech', sans-serif;
 }
 
 /*HEADER AND FOOTER STYLES*/
@@ -286,10 +286,12 @@ font-family: textFont, Century Gothic;
 /*END FORM STYLE*/
 
 /*FONTS*/
+@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+
 @font-face
 {
-font-family: textFont;
-src: url(fonts/sansation_light/Sansation_Light.woff);
+font-family: 'Share Tech', sans-serif;
+/*src: url(fonts/sansation_light/Sansation_Light.woff);*/
 }
 
 @font-face
