@@ -69,4 +69,50 @@ div.mainContent{
 margin: 5% 10%;
 }
 
+div.tabsBox{
+position: relative;
+display: inline-block;
+margin: 0;
+padding: 0;
+z-index: 1; 
+}
+
+ul.tabsList{
+display: table;
+margin: 0;
+padding: 0;
+}
+
+li.tab{
+display: table-cell;
+width: 80px;
+height: 40px;
+border-top: solid 1px white;
+border-right: solid 1px white;
+border-bottom: solid 1px white;
+text-align: center;
+vertical-align: middle;
+opacity: 1;
+background-color: #606060;
+}
+
+#tab1{
+border-left: solid 1px white;
+}
+
+#tab1{
+border-bottom: none;
+}
+
+div.contentBox{
+width: 100%;
+min-height: 450px;
+border: solid 1px white;
+margin: 0;
+padding: 0;
+position: relative;
+top: -6px;
+background-color: #606060; 
+}
+
 
