@@ -65,6 +65,8 @@ background-color: #444;
 
 /* Main Content Area */
 
-
+div.mainContent{
+margin: 5% 10%;
+}
 
 
