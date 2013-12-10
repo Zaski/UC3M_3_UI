@@ -118,7 +118,7 @@ background: #484848;  /* Fondo del contenido */
 position: relative;
 width: 100%;
 box-sizing:border-box;
-height: 400px;  /* Alto del contenido */
+height: 450px;  /* Alto del contenido */
 padding: 30px;
 z-index: 5;
 border: solid 1px white;
@@ -149,4 +149,39 @@ transition: all ease-out 0.2s 0.1s;
 div.mainContent{
 margin: 10%;
 }
+
+div.content-1, div.content-2, div.content-3, div.content-4, div.content-5{
+width: 100%;
+}
+
+h3.payFormTitle{
+text-align: center;
+}
+
+div.formDiv{
+border: solid 1px red;
+}
+
+p.blank{
+visibility: hidden;
+}
+
+#payFormFilm{
+padding-left: 10%;
+display: table;
+}
+
+#payFormFilmText{
+width: 100px;
+line-height: 140%;
+}
+
+#payFormFilmFields{
+margin-left: 13%;
+}
+
+#buttons{
+margin-left: 70%;
+}
+
 
