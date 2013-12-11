@@ -69,7 +69,39 @@ div.mainContent{
 margin: 5% 10%;
 }
 
-#auxWrap {
+#selectWrap {
+	margin-top: 50px; 
+	text-align: center;
+	display: block;
+}
+
+#selectContainer {
+	text-align: justify;
+	display: inline-block;
+}
+
+select {
+	border: 0;
+	-webkit-appearance: none;  
+    -moz-appearance: none;
+    background: url('arrow.png')  no-repeat;
+    background-position: right; 
+    text-indent: 0.01px;               
+    width: 210px;
+    height: 35px;
+    background-color: #D0D0D0;
+    -moz-box-shadow: 0 0 5px #1F1F1F;
+	-webkit-box-shadow: 0 0 5px #1F1F1F;
+	box-shadow: 0 0 5px #1F1F1F;
+    border-radius: 4px;
+    margin: 15px;
+    font-family: 'Signika Negative', sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+
+#filmWrap {
 	background-color: #595959; 
 	margin-left: 15%; 
 	margin-right: 15%; 
