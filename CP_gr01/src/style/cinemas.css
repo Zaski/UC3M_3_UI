@@ -69,4 +69,46 @@ div.mainContent{
 margin: 5% 10%;
 }
 
+div.cinema_frame{
+width: 80%; 
+height: 480px;
+background-color: #595959; 
+margin-left: 10%; 
+margin-right: 10%; 
+margin-top: 50px; 
+-moz-box-shadow: 0 0 5px #1F1F1F;
+-webkit-box-shadow: 0 0 5px #1F1F1F;
+box-shadow: 0 0 5px #1F1F1F;
+}
 
+div.cinemaf_upper{
+display: block; 
+height: 70%;
+}
+
+div.map{
+float: left; 
+display: inline-block;
+}
+
+iframe.map{
+margin: 5% 5% 5% 10%;
+}
+
+div.description{
+float:right; 
+width: 50%;
+}
+
+div.description_inner{
+margin: 10px 10px 10px 10px;
+}
+
+div.lowerpart{
+margin: 10px 10px 10px 10px;
+}
+
+h2{
+font-size: 25px; 
+margin: 0;
+}
