@@ -83,6 +83,16 @@ margin: 0;
 padding: 0;
 }
 
+ul.tabsList label:hover{
+cursor: pointer;
+color: white;
+}
+
+li.tab:hover{
+cursor: pointer;
+color: white;
+}
+
 li.tab{
 display: table-cell;
 width: 80px;
@@ -94,6 +104,8 @@ text-align: center;
 vertical-align: middle;
 opacity: 1;
 background-color: #606060;
+background-image: url(../images/menuBackgroundPattern.png);
+background-repeat: repeat;
 }
 
 #tab1{
@@ -102,6 +114,7 @@ border-left: solid 1px white;
 
 #tab1{
 border-bottom: none;
+background-image: none;
 }
 
 div.contentBox{
@@ -113,6 +126,52 @@ padding: 0;
 position: relative;
 top: -6px;
 background-color: #606060; 
+}
+
+div.content{
+margin: 3% 10%;
+position: absolute;
+display: none;
+width: 80%;
+height: 86%;
+}
+
+div.content h3{
+margin-top: 0;
+text-align: center;
+}
+
+#content1{
+display: block;
+}
+
+div.buttons{
+position: absolute;
+bottom: 0;
+right: 0;
+display: table;
+}
+
+div.button{
+display: table-cell;
+width: 150px;
+height: 40px;
+border: solid 1px white;
+text-align: center;
+vertical-align: middle;
+background-color: #888888;
+color: #202020;
+font-weight: bold;
+}
+
+div.button:hover{
+cursor: pointer;
+color: black;
+background-color: #A0A0A0;
+}
+
+#previous1{
+display: none;
 }
 
 
