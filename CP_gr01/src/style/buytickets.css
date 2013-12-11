@@ -4,6 +4,7 @@
 /*GOOGLE FONTS*/
 @import url(http://fonts.googleapis.com/css?family=Signika+Negative);
 
+/* BODY GENERAL ELEMMENTS */
 body{
 background-color: #333;
 color: #D0D0D0 ;
@@ -13,6 +14,15 @@ font-family: 'Signika Negative', sans-serif;
 
 header{
 min-width: 100%;
+}
+
+a{
+text-decoration: none;
+color: inherit;
+}
+
+a:hover{
+color: white;
 }
 
 /*NAVIGATION MENU*/
@@ -38,15 +48,6 @@ height: 100%;
 vertical-align: middle;
 }
 
-ul.navigationMenu a{
-text-decoration: none;
-color: inherit;
-}
-
-ul.navigationMenu a:hover{
-color: white;
-}
-
 #menuFilms, #menuCinemas, #menuHome{
 background-image: url(../images/menuBackgroundPattern.png);
 background-repeat: repeat;
@@ -64,6 +65,8 @@ background-color: #444;
 /*END OF COMMON CSS FOR ALL PAGES*/
 
 /* Main Content Area */
+
+/* Tabs Box */
 
 div.mainContent{
 margin: 5% 10%;
@@ -117,9 +120,11 @@ border-bottom: none;
 background-image: none;
 }
 
+/* Content box */
+
 div.contentBox{
 width: 100%;
-min-height: 450px;
+min-height: 500px;
 border: solid 1px white;
 margin: 0;
 padding: 0;
@@ -141,7 +146,7 @@ margin-top: 0;
 text-align: center;
 }
 
-#content1{
+/*Initially shown tab*/#content2{
 display: block;
 }
 
@@ -173,5 +178,101 @@ background-color: #A0A0A0;
 #previous1{
 display: none;
 }
+
+input.input1, select.input1,
+input.input2, select.input2{
+font-family: inherit;
+background-color: #E0E0E0;
+border: solid 1px white;
+}
+
+/* Form tab 1 */
+
+div.formContainer1{
+display: table;
+width: 100%;
+}
+
+div.formText1{
+display: table-cell;
+width: 30%;
+line-height: 150%;
+}
+
+div.formFields1{
+display: table-cell;
+}
+
+input.input1, select.input1{
+height: 26px;
+width: 40%;
+}
+
+#formDate{
+width: 39%;
+}
+
+#formNumber{
+width: 10%;
+}
+
+/* Form tab 2 */
+
+div.formContainer2{
+display: table;
+width: 100%;
+}
+
+div.formText2{
+display: table-cell;
+width: 15%;
+line-height: 145%;
+}
+
+div.formFields2{
+display: table-cell;
+width: 35%;
+}
+
+#formPaymentText{
+width: 20%;
+}
+
+input.input2, select.input2{
+width: 90%;
+height: 22px;
+}
+
+/* Payment options */
+
+div.paymentOption{
+display: none;
+position: absolute;
+width: 51%;
+right: 0;
+top: 25%;
+}
+
+#paymentOption1{
+display: table;
+}
+
+div.formText2payment, div.formFields2payment{
+display: table-cell;
+}
+
+div.formText2payment{
+width: 30%;
+line-height: 140%;
+}
+
+#formCardMonth, #formCardYear, #formCardCSC{
+width: 20%;
+}
+
+div.info p{
+margin-top: 0;
+}
+
 
 

@@ -43,7 +43,54 @@
 					</div>
 					<div class="contentBox">
 						<div class="content" id="content1">
-							<h3>content1</h3>
+							<h3>Choose your film, cinema and session</h3>
+							
+							<div class="formContainer1">
+								<div class="formText1">
+									<p>
+										Film:
+										<br/>
+										<br/>
+										Cinema:
+										<br/>
+										<br/>
+										Date:
+										<br/>
+										<br/>
+										Session:
+										<br/>
+										<br/>
+										Number of tickets (max 10):
+									</p>
+								</div>
+								<form class="formFields1" name="ticketForm">
+									<select id="formFilm" class="input1">
+										<option value="film1">Generic Action Film</option>
+										<option value="film2">Generic Comedy Film</option>
+										<option value="film3">Generic Drama Film</option>
+									</select>
+									<br/>
+									<br/>
+									<select id="formCinema" class="input1">
+										<option value="cinema1">Generic Cinema 1</option>
+										<option value="cinema2">Generic Cinema 2</option>
+									</select>
+									<br/>
+									<br/>
+									<input type="date" id="formDate" class="input1"></input>
+									<br/>
+									<br/>
+									<select id="formSession" class="input1">
+										<option value="morning">Morning</option>
+										<option value="afternoon">Afternoon</option>
+										<option value="evening">Evening</option>
+									</select>
+									<br/>
+									<br/>
+									<input type="number" id="formNumber" class="input1" value=1 min=1 max=10></input>
+								</form>
+							</div>
+							
 							<div class="buttons" id="buttons1">
 								<div class="button" id="previous1">
 								PREVIOUS
@@ -54,7 +101,105 @@
 							</div>
 						</div>
 						<div class="content" id="content2">
-							<h3>content2<h3>
+							<h3>Personal, delivery and payment information</h3>
+							
+							<div class="formContainer2">
+								<div class="formText2">
+									<p>
+										Name:
+										<br/>
+										<br/>
+										Surname/s:
+										<br/>
+										<br/>
+										ID number:
+										<br/>
+										<br/>
+										Full adress:
+										<br/>
+										<br/>
+										ZIP code:
+										<br/>
+										<br/>
+										City:
+										<br/>
+										<br/>
+										State/Province:
+									</p>
+								</div>
+								<form class="formFields2" name="ticketForm">
+									<input type="text" id="formName" class="input2"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formSurname" class="input2"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formID" class="input2"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formAdress" class="input2"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formZIP" class="input2"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formCity" class="input2"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formState" class="input2"></input>
+								</form>
+								
+								<div class="formText2" id="formPaymentText">
+									<p>
+										Form of payment:
+									</p>
+								</div>
+								<form class="formFields2" name="ticketForm">
+									<select id="formPayment" class="input2">
+										<option value="credit">Credit/Debit card</option>
+										<option value="payondelivery">Pay On Delivery</option>
+										<option value="deposit">Deposit</option>
+									</select>
+								</form>
+								
+							</div>
+							
+							<div class="paymentOption" id="paymentOption1">
+								<div class="formContainer2">
+									<div class="formText2payment">
+										<p>
+											Card Number:
+											<br/>
+											<br/>
+											Expiration date (Month/Year):
+											<br/>
+											<br/>
+											CSC*:
+										</p>
+									</div>
+									<form class="formFields2payment" name="ticketForm">
+										<input type="text" id="formCardNumber" class="input2"></input>
+										<br/>
+										<br/>
+										<input type="number" id="formCardMonth" class="input2" min=1 max=12></input> /
+										<input type="number" id="formCardYear" class="input2" min=2013 max=2100></input>
+										<br/>
+										<br/>
+										<br/>
+										<input type="text" id="formCardCSC" class="input2"></input>
+									</form>
+								</div>
+								
+									<div class="info">
+										<p>
+											Only VISA, MasterCard and Discover credit and debit cards are allowed.
+											<br/>
+											*CSC (Card Security Code) is a three-digit number located in the back of your card. More information clicking <a href="http://en.wikipedia.org/wiki/Card_security_code" target="_blank">here</a>
+										</p>
+									</div>
+								
+							</div>
+							
 							<div class="buttons" id="buttons2">
 								<div class="button" id="previous2">
 								PREVIOUS
