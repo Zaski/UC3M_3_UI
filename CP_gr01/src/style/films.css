@@ -259,6 +259,8 @@ a.cinema:hover {
 
 div.filmComments {
 	display: block;
+	width:70%;
+	margin:auto;
 }
 
 div.comment {
