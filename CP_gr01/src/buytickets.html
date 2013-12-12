@@ -75,6 +75,12 @@
 										<br/>
 										<br/>
 										Number of tickets (max 9):
+										<br/>
+										<br/>
+										Row (1-19):
+										<br/>
+										<br/>
+										Seat (column 1-29):
 									</p>
 								</div>
 								<form class="formFields1" name="ticketForm">
@@ -102,13 +108,16 @@
 									<br/>
 									<br/>
 									<input type="text" id="formNumber" class="input1" value=1 pattern="[1-9]{1}"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formRow" class="input1" value=1 pattern="[1]{0,1}[0-9]{1}"></input>
+									<br/>
+									<br/>
+									<input type="text" id="formSeat" class="input1" value=1 pattern="[1-2]{0,1}[0-9]{1}"></input>
 								</form>
 							</div>
 							
 							<div class="buttons" id="buttons1">
-								<div class="button" id="previous1">
-								PREVIOUS
-								</div>
 								<div class="button" id="next1">
 								NEXT
 								</div>
@@ -232,13 +241,65 @@
 							</div>
 						</div>
 						<div class="content" id="content3">
-							<h3>content3<h3>
+							<h3>Summary</h3>
+							<p> All the prices are in euros </p>
+							<div class="summary">
+								<div class="summaryText">
+									<p>
+										Film:<br/>
+										Cinema:<br/>
+										Date:<br/>
+										Session:<br/>
+										Row:<br/>
+										Seat:<br/>
+										<br/>
+										Number of tickets:<br/>
+										Price per ticket:<br/>
+										Delivery:<br/>
+										POD fee:<br/>
+										Taxes (21%):<br/>
+										<p id="summaryTextTotal">Total:<p>
+									</p>
+								</div>
+								<div class="summaryContent">
+									<p id="summaryFilm">N/A</p>
+									<p id="summaryCinema">N/A</p>
+									<p id="summaryDate">N/A</p>
+									<p id="summarySession">N/A</p>
+									<p id="summaryRow">N/A</p>
+									<p id="summarySeat">N/A</p>
+									<br/>
+									<p id="summaryNumber">X</p>
+									<p id="summaryPrice">X</p>
+									<p>1.5</p>
+									<p id="summaryFee">X</p>
+									<p id="summaryTaxes">X</p>
+									<hr/>
+									<p id="summaryTotal">X euros</p>
+								</div>
+								<div class="summaryText">
+									<p>
+										Client:<br/>
+										Email:<br/>
+										Deliver to:<br/>
+										<br/>
+										Payment method:<br/>
+									</p>
+								</div>
+								<div class="summaryContent">
+									<p id="summaryClient">N/A</p>
+									<p id="summaryEmail">N/A</p>
+									<p id="summaryAdress">N/A</p>
+									<br/>
+									<p id="summaryPayment">N/A</p>
+								</div>
+							</div>
 							<div class="buttons" id="buttons3">
 								<div class="button" id="previous3">
 								PREVIOUS
 								</div>
-								<div class="button" id="next3">
-								NEXT
+								<div class="button" id="buy">
+								BUY!
 								</div>
 							</div>
 						</div>

@@ -175,10 +175,6 @@ color: black;
 background-color: #A0A0A0;
 }
 
-#previous1{
-display: none;
-}
-
 select.input1, select.input2{
 padding-left: 1%;
 font-family: inherit;
@@ -278,7 +274,7 @@ width: 40%;
 width: 39%;
 }
 
-#formNumber{
+#formNumber, #formRow, #formSeat{
 width: 10%;
 }
 
@@ -340,5 +336,39 @@ div.info p{
 margin-top: 0;
 }
 
+/* Form tab 3 */
 
+#buy{
+background-color: #33CC33;
+color: #005200;
+}
+
+#buy:hover{
+background-color: #5CE65C;
+color: #003300;
+}
+
+div.summary{
+display: table;
+}
+
+div.summaryText{
+display: table-cell;
+width: 150px;
+padding-left: 25px;
+}
+
+div.summaryContent{
+display: table-cell;
+min-width: 100px;
+}
+
+div.summaryContent p{
+margin: 0;
+}
+
+#summaryTotal, #summaryTextTotal{
+font-weight: bold;
+color: red;
+}
 
