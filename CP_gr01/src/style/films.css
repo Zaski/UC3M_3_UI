@@ -72,7 +72,7 @@ margin: 5% 10%;
 /* Filters */
 
 #selectWrap {
-	margin-top: 50px; 
+	margin-top: 5%; 
 	text-align: center;
 	display: block;
 }
@@ -96,7 +96,6 @@ select {
 	-webkit-box-shadow: 0 0 5px #1F1F1F;
 	box-shadow: 0 0 5px #1F1F1F;
     border-radius: 4px;
-    margin: 15px;
     font-family: 'Signika Negative', sans-serif;
 	font-size: 18px;
 	font-weight: bolder;
