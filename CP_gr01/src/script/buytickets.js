@@ -56,6 +56,19 @@ $(document).ready(function(){
 		$("#tab2").css('border-bottom','none');
 	});
 	
+	/*Popup handling*/
+	$( "#buy" ).click(function() {
+		$(".popup").fadeIn();
+	});
+	
+	$( ".continueButton" ).click(function() {
+		$(".popup").fadeOut();
+	});
+	
+	$( ".signupButton" ).click(function() {
+		$(".popup").fadeOut();
+	});
+	
 	/*Tab clicking handling*/
 	$( "#tab2" ).click(function() {
 		$("#next1").click();

@@ -385,3 +385,58 @@ font-weight: bold;
 color: red;
 }
 
+/*POPUP*/
+
+div.popup{
+display: none;
+position: absolute;
+margin: 6%;
+width: 60%;
+background-color: black;
+opacity: 0.95;
+border-radius: 5px;
+z-index: 100;
+padding: 5%;
+border: solid 3px white;
+}
+
+div.popup h3{
+text-align: center;
+margin-top: 0;
+}
+
+div.signupButtons{
+display: table;
+margin: auto;
+}
+
+div.continueButton, div.signupButton{
+display: table-cell;
+border: solid 2px white;
+width: 40%;
+height: 50px;
+text-align: center;
+vertical-align: middle;
+margin: 100px;
+color: black;
+font-weight: bold;
+}
+
+div.signupButton{
+background-color: #00CC00;
+}
+
+div.signupButton:hover{
+cursor: pointer;
+background-color: #4DDB4D;
+}
+
+div.continueButton{
+background-color: #CC0000;
+}
+
+div.continueButton:hover{
+cursor: pointer;
+background-color: #D63333;
+}
+
