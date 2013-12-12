@@ -29,12 +29,11 @@
 				</div>
 				
 			</header>	
-			
+								
 			
 			<!-- Main content area -->
-			<div class="content">
 				<div class="filmDetailWrap">
-					<div id="auxWrap">
+					<div class="auxWrap">
 						<div class="filmInfo">
 							<div class="filmInfoLeftSection">
 								<div class="posterContainer">
@@ -56,20 +55,23 @@
 						</div>
 
 						<br>
+						<div class="filmSinopsis">
+							<h2>Sinopsis</h2>
+							<hr>
+							<p>Write the film sinopsis here.</p>
+						</div>
+
+						<br>
 						<div class="filmScenes">
 							<h2>Film scenes</h2>
 							<hr>
 							<div class="sceneWrap">
 								<img id="scene1" class="scene" src="images/scene1.png">
 								<img id="scene2" class="scene" src="images/scene2.png">
+								<img id="scene1" class="scene" src="images/scene1.png">
+								<img id="scene2" class="scene" src="images/scene2.png">
+								<img id="scene1" class="scene" src="images/scene1.png">
 							</div>
-						</div>
-
-						<br>
-						<div class="filmSinopsis">
-							<h2>Sinopsis</h2>
-							<hr>
-							Write the film sinopsis here.
 						</div>
 
 						<br>
@@ -85,12 +87,52 @@
 							<hr>
 
 							<div id="comment1" class="comment">
-								TODO
+								<div class="rate">
+									<label class="infoLabel">User rating: </label>
+								</div>
+								<br>
+								Content of the comment
+
+								<div class="date">
+									Posted by username on 12/5/2013 at 21:55:48
+								</div>
 							</div>
+
+							<hr class="commentDivision">
+
+							<div id="comment2" class="comment">
+								<div class="rate">
+									<label class="infoLabel">User rating: </label>
+								</div>
+								<br>
+								Content of the comment
+								<br>
+								<div class="date">
+									Posted by username on 3/7/2013 at 21:55:48
+								</div>
+							</div>	
+
+							<hr class="commentDivision">
+
+							<div id="commentFormWrap">
+								<h3>Add a new comment</h3>
+								<form id="commentForm">
+									<div id="commentFieldWrap">
+										<textarea  id="commentFormContent" rows="7" cols="55" maxlength="1500" name="comment" form="commentForm" placeholder="Type the comment here" required></textarea>
+										<div class="rate">
+											<label class="infoLabel">Rate: </label>
+										</div>
+									</div>
+									
+									<br>
+									<div id="submitWrap">
+										<input type="submit" id="submitComment" value="Send comment"/>
+									</div>
+								</form>
+							</div>				
 						</div>
 					</div>
 				</div>
-			</div>
 			
 			<!-- Footer -->
 			<footer>
