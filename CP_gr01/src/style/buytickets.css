@@ -102,22 +102,28 @@ width: 80px;
 height: 40px;
 border-top: solid 1px white;
 border-right: solid 1px white;
-border-bottom: solid 1px white;
 text-align: center;
 vertical-align: middle;
 opacity: 1;
 background-color: #606060;
-background-image: url(../images/menuBackgroundPattern.png);
 background-repeat: repeat;
 }
 
 #tab1{
 border-left: solid 1px white;
-}
 
-#tab1{
 border-bottom: none;
 background-image: none;
+}
+
+#tab2{
+border-bottom: solid 1px white;
+background-image: url(../images/menuBackgroundPattern.png);
+}
+
+#tab3{
+border-bottom: solid 1px white;
+background-image: url(../images/menuBackgroundPattern.png);
 }
 
 /* Content box */
@@ -157,7 +163,7 @@ right: 0;
 display: table;
 }
 
-div.button{
+div.button, #buy{
 display: table-cell;
 width: 150px;
 height: 40px;
@@ -346,11 +352,14 @@ margin-top: 0;
 #buy{
 background-color: #33CC33;
 color: #005200;
+height: 42px;
+font-weight: bold;
 }
 
 #buy:hover{
 background-color: #5CE65C;
 color: #003300;
+cursor: pointer;
 }
 
 div.summary{

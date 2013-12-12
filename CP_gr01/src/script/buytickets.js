@@ -12,23 +12,61 @@ $(document).ready(function(){
 	/*Button handling*/
 	$( "#next1" ).click(function() {
 		$("#content1").hide();
+		$("#content3").hide();
 		$("#content2").show();
+		
+		$(".tab").css('background-image','url(images/menuBackgroundPattern.png)');
+		$(".tab").css('border-bottom','solid 1px white');
+		$("#tab2").css('background-image','none');
+		$("#tab2").css('border-bottom','none');
 	});
 	
 	$( "#next2" ).click(function() {
 		$("#content2").hide();
+		$("#content1").hide();
 		$("#content3").show();
-		alert("For this tab to show the appropriate content, a CVM system with a database behind is needed. Therefore, only the layout with default values is shown.");
+		
+		$(".tab").css('background-image','url(images/menuBackgroundPattern.png)');
+		$(".tab").css('border-bottom','solid 1px white');
+		$("#tab3").css('background-image','none');
+		$("#tab3").css('border-bottom','none');
+		
+		alert("For this tab to show the appropriate content, a CVM system with a database behind is needed. Therefore, only the layout with default values is shown.\n\nAlso, a CVM system is taken for granted at this point, which would be the one handling the proper introduction of data in the form.");
 	});
 	
 	$( "#previous2" ).click(function() {
 		$("#content2").hide();
+		$("#content3").hide();
 		$("#content1").show();
+		
+		$(".tab").css('background-image','url(images/menuBackgroundPattern.png)');
+		$(".tab").css('border-bottom','solid 1px white');
+		$("#tab1").css('background-image','none');
+		$("#tab1").css('border-bottom','none');
 	});
 	
 	$( "#previous3" ).click(function() {
 		$("#content3").hide();
+		$("#content1").hide();
 		$("#content2").show();
+		
+		$(".tab").css('background-image','url(images/menuBackgroundPattern.png)');
+		$(".tab").css('border-bottom','solid 1px white');
+		$("#tab2").css('background-image','none');
+		$("#tab2").css('border-bottom','none');
+	});
+	
+	/*Tab clicking handling*/
+	$( "#tab2" ).click(function() {
+		$("#next1").click();
+	});
+	
+	$( "#tab3" ).click(function() {
+		$("#next2").click();
+	});
+	
+	$( "#tab1" ).click(function() {
+		$("#previous2").click();
 	});
 	
 	/*Show alert on login*/
@@ -47,5 +85,6 @@ $(document).ready(function(){
 			$("#paymentOption1").hide();
 		}
 	});
+	
 	
 });

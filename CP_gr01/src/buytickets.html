@@ -47,15 +47,15 @@
 							
 							<div class="login">
 								<h4>Log in</h4>
-								<form>
-								<p>Email:</p>
-								<input type="email" class="input1">
-								<br/>
-								<p>Password:</p>
-								<input type="password" class="input2">
-								<br/>
-								<br/>
-								<div id="loginSubmit">Fulfill form for me!</div>
+								<form name="loginForm">
+									<p>Email:</p>
+									<input type="email" class="input1">
+									<br/>
+									<p>Password:</p>
+									<input type="password" class="input2">
+									<br/>
+									<br/>
+									<input type="submit" id="loginSubmit" value="Fulfill form for me!"></input>
 								</form>
 							</div>
 							
@@ -84,36 +84,36 @@
 									</p>
 								</div>
 								<form class="formFields1" name="ticketForm">
-									<select id="formFilm" class="input1">
+									<select id="formFilm" class="input1" required>
 										<option value="film1">Generic Action Film</option>
 										<option value="film2">Generic Comedy Film</option>
 										<option value="film3">Generic Drama Film</option>
 									</select>
 									<br/>
 									<br/>
-									<select id="formCinema" class="input1">
+									<select id="formCinema" class="input1" required>
 										<option value="cinema1">Generic Cinema 1</option>
 										<option value="cinema2">Generic Cinema 2</option>
 									</select>
 									<br/>
 									<br/>
-									<input type="date" id="formDate" class="input1"></input>
+									<input type="date" id="formDate" class="input1" required></input>
 									<br/>
 									<br/>
-									<select id="formSession" class="input1">
+									<select id="formSession" class="input1" required>
 										<option value="morning">Morning</option>
 										<option value="afternoon">Afternoon</option>
 										<option value="evening">Evening</option>
 									</select>
 									<br/>
 									<br/>
-									<input type="text" id="formNumber" class="input1" value=1 pattern="[1-9]{1}"></input>
+									<input type="text" id="formNumber" class="input1" value=1 pattern="[1-9]{1}" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formRow" class="input1" value=1 pattern="[1]{0,1}[0-9]{1}"></input>
+									<input type="text" id="formRow" class="input1" value=1 pattern="[1]{0,1}[0-9]{1}" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formSeat" class="input1" value=1 pattern="[1-2]{0,1}[0-9]{1}"></input>
+									<input type="text" id="formSeat" class="input1" value=1 pattern="[1-2]{0,1}[0-9]{1}" required></input>
 								</form>
 							</div>
 							
@@ -154,28 +154,28 @@
 									</p>
 								</div>
 								<form class="formFields2" name="ticketForm">
-									<input type="text" id="formName" class="input2"></input>
+									<input type="text" id="formName" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formSurname" class="input2"></input>
+									<input type="text" id="formSurname" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="email" id="formEmail" class="input2"></input>
+									<input type="email" id="formEmail" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formID" class="input2"></input>
+									<input type="text" id="formID" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formAdress" class="input2"></input>
+									<input type="text" id="formAdress" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formZIP" class="input2"></input>
+									<input type="text" id="formZIP" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formCity" class="input2"></input>
+									<input type="text" id="formCity" class="input2" required></input>
 									<br/>
 									<br/>
-									<input type="text" id="formState" class="input2"></input>
+									<input type="text" id="formState" class="input2" required></input>
 								</form>
 								
 								<div class="formText2" id="formPaymentText">
@@ -184,7 +184,7 @@
 									</p>
 								</div>
 								<form class="formFields2" name="ticketForm">
-									<select id="formPayment" class="input2">
+									<select id="formPayment" class="input2" required>
 										<option value="credit">Credit/Debit card</option>
 										<option value="payondelivery">Pay On Delivery</option>
 									</select>
@@ -298,9 +298,7 @@
 								<div class="button" id="previous3">
 								PREVIOUS
 								</div>
-								<div class="button" id="buy">
-								BUY!
-								</div>
+								<input type="submit" form="ticketForm" class="button" id="buy" value="BUY!">
 							</div>
 						</div>
 					<div>
