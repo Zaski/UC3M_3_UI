@@ -164,25 +164,27 @@ div.title {
 }
 
 /* Film detail */
-div.filmDetailWrap {
+#filmDetailWrap {
 	background-color: #595959; 
-	margin-left: 20%; 
-	margin-right: 20%; 
+	width: 60%;
+	margin: 0 auto;
 	margin-top: 50px; 
 	margin-bottom: 50px;
 	-moz-box-shadow: 0 0 5px #1F1F1F;
 	-webkit-box-shadow: 0 0 5px #1F1F1F;
 	box-shadow: 0 0 5px #1F1F1F;
 	border-radius: 4px;
+
 }
 
-div.auxWrap {
-	width: 85%;
-	margin: 0 auto;
-	margin-top: 30px;
+#filmDetailContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 
 div.filmInfo {
+	margin-top: 40px;
 	margin: 0 auto;
 }
 
@@ -213,7 +215,7 @@ div.filmScenes {
 
 div.sceneWrap {
 	display: inline-block;
-	text-align: center;
+	text-align: left;
 	margin-left: 40px;
 	margin-right: 40px;
 }
