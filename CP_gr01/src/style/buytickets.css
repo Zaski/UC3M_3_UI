@@ -146,7 +146,7 @@ margin-top: 0;
 text-align: center;
 }
 
-/*Initially shown tab*/#content3{
+/*Initially shown tab*/#content1{
 display: block;
 }
 
@@ -318,6 +318,10 @@ top: 25%;
 
 #paymentOption1{
 display: table;
+}
+
+#paymentOption1{
+display: none;
 }
 
 div.formText2payment, div.formFields2payment{

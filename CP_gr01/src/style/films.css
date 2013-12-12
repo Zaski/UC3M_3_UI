@@ -289,7 +289,7 @@ div.date {
 
 #commentFormContent {
 	min-height: 22px;
-	min-width: 350px;
+	width: 100%;
 	border: 1px solid #999999;
 	padding: 0 10px;
 	margin: 1%;
