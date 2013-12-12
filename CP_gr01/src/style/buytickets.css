@@ -146,7 +146,7 @@ margin-top: 0;
 text-align: center;
 }
 
-/*Initially shown tab*/#content1{
+/*Initially shown tab*/#content3{
 display: block;
 }
 
@@ -236,7 +236,7 @@ height: 24px;
 
 #loginSubmit{
 margin: auto;
-width: 190px;
+width: 90%;
 border: solid 1px white;
 text-align: center;
 background-color: #888888;
@@ -257,7 +257,7 @@ width: 100%;
 
 div.formText1{
 display: table-cell;
-width: 30%;
+width: 33%;
 line-height: 150%;
 }
 
@@ -287,7 +287,7 @@ width: 100%;
 
 div.formText2{
 display: table-cell;
-width: 15%;
+width: 20%;
 line-height: 140%;
 }
 
@@ -297,7 +297,8 @@ width: 35%;
 }
 
 #formPaymentText{
-width: 20%;
+width: 27%;
+padding-left: 3%;
 }
 
 input.input2, select.input2{
