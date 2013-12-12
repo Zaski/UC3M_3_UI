@@ -164,22 +164,10 @@ div.title {
 }
 
 /* Film detail */
-/*#auxWrap {
-	text-align: center;
-    font-size:0;
-    display: inline-block;
-    padding-left:5px;
-    padding-bottom:5px;
-	width: 98%;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	margin-top: 30px;
-}*/
-
 div.filmDetailWrap {
 	background-color: #595959; 
-	margin-left: 15%; 
-	margin-right: 15%; 
+	margin-left: 20%; 
+	margin-right: 20%; 
 	margin-top: 50px; 
 	margin-bottom: 50px;
 	-moz-box-shadow: 0 0 5px #1F1F1F;
@@ -188,13 +176,19 @@ div.filmDetailWrap {
 	border-radius: 4px;
 }
 
+div.auxWrap {
+	width: 85%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
 div.filmInfo {
-	display: block;
+	margin: 0 auto;
 }
 
 div.filmInfoLeftSection {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 div.filmRating {
@@ -203,7 +197,8 @@ div.filmRating {
 div.filmInfoRightSection {
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 20px;
+	margin-left: 40px;
+	text-align: left;
 }
 
 label.infoLabel {
@@ -218,7 +213,9 @@ div.filmScenes {
 
 div.sceneWrap {
 	display: inline-block;
-	text-align: left;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 
 img.scene {
@@ -234,9 +231,14 @@ div.filmSinopsis {
 	display: block;
 }
 
+p {
+	margin-left: 40px;
+}
+
 a.cinema {
 	display: block;
 	margin: 10px;
+	margin-left: 30px;
 	vertical-align: top;
 	text-decoration: none;
 	font-family: 'Signika Negative', sans-serif;
@@ -255,4 +257,67 @@ a.cinema:hover {
 
 div.filmComments {
 	display: block;
+}
+
+div.comment {
+	margin-left: 40px;
+}
+
+hr.commentDivision {
+	border-style: dotted;
+	height: 1px;
+	margin: 5px;
+}
+
+div.rate {
+}
+
+div.date {
+	font-size: 12px;
+	font-style: italic;
+	text-align: right;
+}
+
+#commentFormWrap {
+	text-align: left;
+	width:70%;
+	padding: 5px;
+	margin:20px auto;
+}
+
+#commentFormContent {
+	min-height: 22px;
+	min-width: 350px;
+	border: 1px solid #999999;
+	padding: 0 10px;
+	margin: 1%;
+	color:#333333;
+	background-color:#D0D0D0;
+	resize:none;
+}
+
+#submitWrap {
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom:20px;
+}
+
+#submitComment {
+	border: 0;
+	-webkit-appearance: none;  
+    -moz-appearance: none;   
+    height: 25px;
+    background-color: #D0D0D0;
+    -moz-box-shadow: 0 0 5px #1F1F1F;
+	-webkit-box-shadow: 0 0 5px #1F1F1F;
+	box-shadow: 0 0 5px #1F1F1F;
+    border-radius: 4px;
+    margin: 15px;
+    font-family: 'Signika Negative', sans-serif;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+#submitComment:hover {
+	opacity: 0.7;
 }
