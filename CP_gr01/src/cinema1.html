@@ -34,35 +34,35 @@
 			
 			<!-- Main content area -->
 			<div class="content">
-				
-				<!-- Select items contain the forward destination page for simulation purposes only -->
+			
+						<!-- Select items contain the forward destination page for simulation purposes only -->
 				<div id="selectContainer">
 						<select class="cinemaSelector">
-							<option name="action" value="cinemasGeneric1.html">Generic cinema 1</option>
-							<option name="drama" value="cinemasGeneric2.html" selected>Generic cinema 2</option>
+							<option name="action" value="cinema1.html" selected>Generic cinema 1</option>
+							<option name="drama" value="cinema2.html">Generic cinema 2</option>
 						</select>
 				</div>
-				
+			
 				<div class="cinema_frame">
 					<!-- upper part-->
 					<div class="cinemaf_upper">
 						
 						<!--map-->
 						<div class="map">
-							<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Calle+fuencarral+16+madrid&amp;aq=&amp;sll=40.426365,-3.700644&amp;sspn=0.002426,0.003449&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+Fuencarral,+16,+28004+Madrid&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" class="map"></iframe><br /><small>		
+							<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Calle+del+Doctor+Cortezo+6+madrid+madrid&amp;aq=&amp;sll=40.251625,-3.236675&amp;sspn=0.077823,0.110378&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+Doctor+Cortezo,+6,+28012+Madrid&amp;ll=40.413529,-3.70384&amp;spn=0.001213,0.001725&amp;t=m&amp;z=14&amp;output=embed" class="map"></iframe><br /><small>		
 						</div>
 						
 						<!--Description-->
 						<div class="description">
 							<div class="description_inner">
-							<h1>Generic cinema 2</h1>
+							<h1>Generic cinema 1</h1>
 							<hr>
 							<div class="description_inner_text">
-							<b>Address:</b> Calle Fuencarral, 16. CP: 28004.<br><br>
-							<b>Telephone:</b> 912 22 22 22<br><br>
+							<b>Address:</b> Calle del Doctor Cortezo 6. CP: 28012.<br><br>
+							<b>Telephone:</b> 911 11 11 11<br><br>
 							<b>How to get there:</b><br><br>
-							Metro line 1-5. Station: Gran via.<br><br>
-							Bus lines: 1, 2, 202, 74, N16, N18. N21.<br><br>
+							Metro line 1. Station: Tirso de Molina.<br><br>
+							Bus lines: 65, 32, 26, 6.<br><br>
 							</div>
 							
 							</p>
@@ -77,18 +77,48 @@
 						<hr>
 							<!--Buttons with important information-->
 							<div class="inf_button">
-								Prices: 9€
+								Prices: 7€
 							</div>
 							
 							<div class="inf_button">
 								Services: 
+								<img src="http://www.clker.com/cliparts/l/5/9/y/f/o/bathroom-icon-md.png" alt="bathroom" title="bathroom" height="15" width="15" class="icon"></img>
 								
 								<img src="http://bigmooz.com/image/2013/05/restaurant-icon-png-24032-hd-wallpapers.png" alt="restaurant" title="restaurant" height="15" width="15" class="icon"></img>
 								
 								<img src="http://www.hddfancontrol.com/assets/img/temperature-icon.png" alt="Temperature" title="Temperature regulation" height="15" width="15" class="icon"></img>
 							</div>	
 					</div>
+				</div>	
+
+				<!--comments-->
+				<div class="cinemaComments">
+					<h2>Comments</h2>
+					<hr>
+
+					<div id="comment1" class="comment">
+						
+
+							<div id="commentFormWrap">
+								<h3>Add a new comment</h3>
+								<form id="commentForm">
+									<div id="commentFieldWrap">
+										<textarea  id="commentFormContent" rows="7" cols="55" maxlength="1500" name="comment" form="commentForm" placeholder="Type the comment here" required></textarea>
+										<br><br>
+										<div class="rate">
+											<label class="infoLabel">Rate: </label>
+										</div>
+									</div>
+									
+									<br>
+									<div id="submitWrap">
+										<input type="submit" id="submitComment" value="Send comment"/>
+									</div>
+								</form>
+							</div>				
+					</div>
 				</div>
+				
 			</div>
 			
 			<!-- Footer -->
